@@ -1,6 +1,6 @@
 package in.ramesh.validator;
 
-import in.ramesh.model.Order;
+import in.ramesh.model.Hotel;
 
 public class OrderValidation {
 
@@ -15,7 +15,7 @@ public class OrderValidation {
 	 * @return
 	 */
 
-	public static boolean isValidFood(Order food) {
+	public static boolean isValidFood(Hotel food) {
 		boolean isValid = false;
 		try {
 			boolean foodName = StringValidation.isValidString(food.getFoodName(), "Invalid Food Name");
