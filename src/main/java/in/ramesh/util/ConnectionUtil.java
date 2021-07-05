@@ -2,17 +2,12 @@ package in.ramesh.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import in.ramesh.exception.DBException;
-
+import java.sql.Statement;
 
 public class ConnectionUtil {
-
 	private ConnectionUtil() {
-		// default Constructor
+
 	}
 
 	private static String driverClass = System.getenv("spring.datasource.driver-class-name");
@@ -20,34 +15,23 @@ public class ConnectionUtil {
 	private static String username = System.getenv("spring.datasource.username");
 	private static String password = System.getenv("spring.datasource.password");
 
-	public static Connection getConnection() throws DBException {
-		Connection connection = null;
-		try {
-			// Step 1: Load the database driver into memory ( ClassNotFoundException )
-			Class.forName(driverClass);
-			// Step 2: Get the Database Connection (SQLException)
-			connection = DriverManager.getConnection(url, username, password);
-		} catch (ClassNotFoundException | SQLException e) {
-			e.printStackTrace();
-			throw new DBException("Unable to get the database connection");
-		}
+	public static Connection getConnection() throws ClassNotFoundException, SQLException {
+
+		Class.forName(driverClass);
+		Connection connection = DriverManager.getConnection(url, username, password);
+
 		return connection;
 	}
 
-	public static void close(Connection connection, PreparedStatement pst, ResultSet rs) {
+	public static void close(Statement st, Connection con) {
 		try {
-			if (rs != null) {
-				rs.close();
-			}
-			if (pst != null) {
-				pst.close();
-			}
-			if (connection != null) {
-				connection.close();
+			if (con != null && st != null) {
+				con.close();
+				st.close();
+
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
-	
 }

@@ -6,9 +6,14 @@
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
 	<main class="container-fluid">
-		<h3>Stay Peacefully!!!</h3>
 
 
+		<%
+		String errorMessage = request.getParameter("errorMessage");
+		if (errorMessage != null) {
+			out.println("<font color='red'>" + errorMessage + "</font>");
+		}
+		%>
 	</main>
 </body>
 </html>
