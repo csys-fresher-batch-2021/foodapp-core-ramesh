@@ -23,6 +23,7 @@ public class TestOrderDetailService {
 	
 	public static void listFoods() {
 		List<Hotel> listFoods=OrderDetailService.getFoodList();
+		
 			for (Hotel food : listFoods) {
 			
 			System.out.println(food.getFoodName());
