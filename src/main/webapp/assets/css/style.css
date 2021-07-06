@@ -488,11 +488,10 @@ padding-left: 100px;}
 
 #contact_block .contact_main{width: 100%;}
 #contact_block .contact_main .contact_form{padding:0;}
-#contact_block .contact_main .contact_image{}
 #contact_block .contact_main .contact_image img{width: 100%;}
 #contact_block .contact_main .contact_form h4{font-size: 24px;color: #333333;font-family: 'poppinsbold';font-weight: normal;margin-bottom: 30px;}
 #contact_block .contact_main .contact_form .contact_form_blk{width: 50%;display: inline-block;float: left;margin-bottom: 25px;}
-#contact_block .contact_main .contact_form form{}
+
 #contact_block .contact_main .contact_form .contact_form_blk label{font-size: 16px;color: #747474;font-family: 'poppinsregular';font-weight: normal;width: 100%;}
 #contact_block .contact_main .contact_form .contact_form_blk input{font-size: 13px;color: #aaaaaa;font-family: 'poppinsregular';font-weight: normal;
 border: 1px solid #aaa;border-radius: 20px;height: 44px;padding: 0px 18px;width: 90%;}
