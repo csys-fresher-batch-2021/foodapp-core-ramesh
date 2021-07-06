@@ -199,7 +199,7 @@
                     		<h3>First class business solutions since 1995</h3>
                             <div class="section-heading-line">
                     		</div>
-                    		<p>Lorem ipsum r sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    		<p>Lorem ipsum teerr sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     
                     		<ul>
                     	
